@@ -12,6 +12,7 @@ By the way cpdf.py is forked from https://github.com/hkdb/cpdf.
 Example:
 
 Before:
+```
 .
 ├── a1
 │   ├── 01.png
@@ -25,8 +26,9 @@ Before:
 │   ├── 02.png
 │   └── 03.png
 └── fakku-manager.py
-
+```
 After:
+```
 .
 ├── a1
 │   ├── 01.png
@@ -47,5 +49,5 @@ After:
     ├── a1.pdf
     ├── a2.pdf
     └── a3.pdf
-
+```
 
