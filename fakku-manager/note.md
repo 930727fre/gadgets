@@ -4,7 +4,7 @@ usage:`python3 fakku-manager.py`
 Feature:
 1. Merge all png in _all.pdf alphabetically.
 2. Store individual pdf in output folder.
-3. Divide _all.pdf into separate documents at about 200 mb, so that kindle can handle it without crashing.
+3. Divide _all.pdf into separate documents at about 200 mb, so that Amazon Kindle can handle it without crashing.
 
 In order to compress the pdf, use `python3 cpdf.py`.
 By the way cpdf.py is forked from https://github.com/hkdb/cpdf.
