@@ -2,6 +2,7 @@ import os
 import img2pdf
 import time
 from PyPDF2 import PdfFileMerger
+import time
 
 
 
@@ -10,12 +11,12 @@ input("press any key to continue or ctrl+c to suspend")
 title=input("please enter title for the output files:")
 
 if title=="auto":
-    print
-    for i in range(len(os.getcwd().split("/"))):
+    for i in range(len(os.getcwd().split("/"))-1,0,-1):
         if "fakku" in os.getcwd().split("/")[i]:
             title=os.getcwd().split("/")[i]
             break
-
+print("title:"+title)
+input("press any key to continue or ctrl+c to suspend")
     
 start=time.time()
 
@@ -29,15 +30,17 @@ for root,dirs,files in os.walk(os.getcwd()):
     foldername=root.split(os.path.sep)[-1]
     if dirs==[] and not foldername=="output":
         if len(files)>10:
-            counter=int(counter)+1
+            counter=counter+1
             print("process:"+str(counter))
             files.sort()
             for i in files:
                 #print(os.path.join(root,i))
                 ls.append(os.path.join(root,i))
             print(foldername)
+            #time.sleep(5)
             with open("./output/"+foldername+".pdf", "wb") as f:
                 f.write(img2pdf.convert([i for i in ls if i.endswith(".png")],compress=True))
+            #time.sleep(5)
                 
 merger = PdfFileMerger()
 
