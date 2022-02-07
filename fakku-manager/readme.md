@@ -1,13 +1,10 @@
-Fakku-manager.py aims to merge different images to one pdf.
-usage:`python3 fakku-manager.py`
+This script is capable to merge different images to one pdf and compress the files if necessary.
+usage:`python3 main.py`
 
 Feature:
-1. Merge all png in _all.pdf alphabetically.
-2. Store individual pdf in output folder.
-3. Divide _all.pdf into separate documents at about 200 mb, so that Amazon Kindle can handle it without crashing.
-
-In order to compress the pdf, use `python3 cpdf.py`.
-By the way cpdf.py is forked from https://github.com/hkdb/cpdf.
+1. Merge all png in one pdf alphabetically.
+2. Compress the files at about half the size of original files.
+3. Screen the books you don't want.
 
 Example:
 
@@ -25,7 +22,7 @@ Before:
 │   ├── 01.png
 │   ├── 02.png
 │   └── 03.png
-└── fakku-manager.py
+└── main.py
 ```
 After:
 ```
@@ -41,13 +38,16 @@ After:
 │   ├── 01.png
 │   ├── 02.png
 │   └── 03.png
-├── fakku-manager.py
-├── example_all.pdf
-├── example_pt.1.pdf
-├── fakku_manager.py
+├── main.py
 └── output
     ├── a1.pdf
     ├── a2.pdf
     └── a3.pdf
 ```
 
+Update log:
+v1: 
+ - Realizing fundamental features.
+v1.2:
+ - Merge three .py into one.
+ - Add compression tool.

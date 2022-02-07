@@ -1,3 +1,2 @@
-This repo consists several gadgets for different purpose.
-That is to say, there is no primary purpose for this repo.
+This repo comprises several gadgets for diverse goal.　Check out each folders for their features.
 
